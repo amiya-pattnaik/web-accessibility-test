@@ -1,33 +1,39 @@
-## Web Accessibility Testing
+## Web Accessibility Test (WAT)
 
-This repository contains common methods for  Web Accessibility Testing recommended by WCAG. It uses `axe-core` which is an accessibility testing engine for websites and other HTML-based user interfaces. It's fast, secure, lightweight, and was built to seamlessly integrate with any existing test environment so you can automate accessibility testing alongside your regular functional testing. It shows hints which internally run the recommended set of WCAG 2.1 Level A and Level AA rules from axe-core. For complete E2E testing using `webdriver.io` and `Allure` reporting please refer to the [WebAccessibilityTestTool](https://github.com/amiya-pattnaik/WebAccessibilityTestTool).
+This repository contains common methods for  Web Accessibility Testing recommended by WCAG. It uses `axe-core` which is an accessibility testing engine for websites and other HTML-based user interfaces. It's fast, secure, lightweight, and was built to seamlessly integrate with any existing test environment so you can automate accessibility testing alongside your regular functional testing. It shows hints which internally run the recommended set of WCAG 2.1 Level A and Level AA rules from axe-core.
 
-## Installation
+For complete E2E automated testing using `webdriver.io` and `Allure` reporting please refer to the [WebAccessibilityTestTool](https://github.com/amiya-pattnaik/WebAccessibilityTestTool).
 
-Download this package:
+### Accessibility Rules
+The complete list of rules run by axe-core can be found in [axe-core/doc/rule-descriptions.md](https://github.com/dequelabs/axe-core/blob/develop/doc/rule-descriptions.md).
 
-`npm install web-accssbility-test --saveDev`
+### Installation
 
-## Example
-These are few examples below on how to use:
+Node must be installed; please follow the directions at http://www.nodejs.org to install it.
+
+`npm install web-accessibility-test --save-dev`
+
+### Example
+This example demonstrates how to use `web-accessibility-test` with unit testing framework such as Mocha or Jasmine or CucumberJS.
 
 ```
-var wat = require('web-accssbility-test');
+var wat = require('web-accessibility-test');
+
+// to list out WCAG rules
+let result = wat.getRules();
+console.log(result);
 
 // to get WCAG Violations
 let result = wat.getViolations();
 console.log(result);
 
-// to list out WCAG rules
-let result = wat.getRules();
-console.log(result);
 
 // to run script with custom tag
 let result = wat.analyseWithTag(["your-custom-tag"]);
 console.log(result);
 
 // to run script with with context enabled
-let wat = require('web-accssbility-test');
+let wat = require('web-accessibility-test');
 wat.analyseWithContext([{include: [['#iframe']]}]);
 
 // to get the WCAG recommended best practice
@@ -38,8 +44,10 @@ console.log(result);
 ```
 ### References
 [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/)
-[axe-cre](https://github.com/dequelabs/axe-core)
 
+[axe-core](https://github.com/dequelabs/axe-core)
+
+[Deque Labs](https://github.com/dequelabs)
 
 ### License
 ISC
