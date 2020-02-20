@@ -1,8 +1,8 @@
 ## Web Accessibility Test (WAT)
 
-This repository contains common methods for  Web Accessibility Testing recommended by WCAG. It uses `axe-core` which is an accessibility testing engine for websites and other HTML-based user interfaces. It's fast, secure, lightweight, and was built to seamlessly integrate with any existing test environment so you can automate accessibility testing alongside your regular functional testing. It shows hints which internally run the recommended set of WCAG 2.1 Level A and Level AA rules from axe-core.
+This NPM Package provides common methods for Web Accessibility Testing recommended by WCAG. It uses `axe-core` which is an accessibility testing engine for websites and other HTML-based user interfaces. It's fast, secure, lightweight, and was built to seamlessly integrate with any existing test environment so you can automate accessibility testing alongside your regular functional testing. It shows hints which internally run the recommended set of WCAG 2.1 Level A and Level AA rules from axe-core.
 
-For complete E2E automated testing using `webdriver.io` and `Allure` reporting please refer to the [WebAccessibilityTestTool](https://github.com/amiya-pattnaik/WebAccessibilityTestTool).
+`Note:` Should you require a complete E2E automated testing solution with `webdriver.io` and `Allure` reporting , then refer to the [WebAccessibilityTestTool](https://github.com/amiya-pattnaik/WebAccessibilityTestTool) boilerplate project.
 
 ### Accessibility Rules
 The complete list of rules run by axe-core can be found in [axe-core/doc/rule-descriptions.md](https://github.com/dequelabs/axe-core/blob/develop/doc/rule-descriptions.md).
@@ -37,7 +37,6 @@ let wat = require('web-accessibility-test');
 wat.analyseWithContext([{include: [['#iframe']]}]);
 
 // to get the WCAG recommended best practice
-
 let result = wat.getBestPractice();
 console.log(result);
 
@@ -50,4 +49,4 @@ console.log(result);
 [Deque Labs](https://github.com/dequelabs)
 
 ### License
-ISC
+MIT
