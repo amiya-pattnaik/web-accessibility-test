@@ -7,6 +7,7 @@ This NPM Package provides common methods for Web Accessibility Testing recommend
 ### Accessibility Rules
 The complete list of rules run by axe-core can be found in [axe-core/doc/rule-descriptions.md](https://github.com/dequelabs/axe-core/blob/develop/doc/rule-descriptions.md).
 
+
 ### Installation
 
 Node must be installed; please follow the directions at http://www.nodejs.org to install it.

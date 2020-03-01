@@ -1,7 +1,7 @@
 {
 	"name": "web-accessibility-test",
 	"version": "1.0.2",
-	"description": "web accessibility testing tool using axe-core",
+	"description": "web accessibility testing using axe-core and webdriver.io",
 	"main": "lib/index.js",
 	"scripts": {
 		"test": "npm run build && node lib/index.js"
